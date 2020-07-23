@@ -19,7 +19,6 @@ function [sFeat,Nf,Sf,curve]=jACO(feat,label,N,T,tau,eta,alpha,beta,rho,phi,Nf)
 % eta:   Initial beta
 % phi:   Coefficient 
 % Nf:    Set number of selected features
-% *Note: k-value of KNN & k-fold setting can be modified in jFitnessFunction.m
 %---Output-----------------------------------------------------------------
 % sFeat: Selected features (instances x features)
 % Sf:    Selected feature index
@@ -32,7 +31,7 @@ fun=@jFitnessFunction;
 D=size(feat,2); 
 tau=tau*ones(D,D); eta=eta*ones(D,D);
 curve=inf; fitG=inf; fit=zeros(1,N); tau0=tau; t=1; 
-figure(1); clf; axis([1 100 0 0.3]); xlabel('Number of Iterations');
+figure(1); clf; axis([1 100 0 0.2]); xlabel('Number of Iterations');
 ylabel('Fitness Value'); title('Convergence Curve'); grid on;
 %---Iterations start-------------------------------------------------------
 while t <= T
