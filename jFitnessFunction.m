@@ -7,11 +7,7 @@
 %-------------------------------------------------------------------------%  
 
 function fitness=jFitnessFunction(feat,label,X)
-if sum(X==1)==0
-  fitness=inf;
-else
-  fitness=jwrapperKNN(feat(:,X==1),label);
-end
+fitness=jwrapperKNN(feat(:,X),label);
 end
 
 
