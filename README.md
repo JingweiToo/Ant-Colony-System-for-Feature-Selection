@@ -15,7 +15,7 @@
 * *alpha*    : coefficient control tau
 * *beta*     : coefficient control eta
 * *tau*      : initial tau
-* *eta*      : initial beta
+* *eta*      : initial eta
 * *rho*      : pheromone
 * *phi*      : coefficient 
 * *Nf*       : set number of selected features
