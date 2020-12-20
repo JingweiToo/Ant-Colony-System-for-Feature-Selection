@@ -1,24 +1,20 @@
-%-------------------------------------------------------------------------%
-%  Fitness Function (Error Rate) source codes demo version                %
-%                                                                         %
-%  Programmer: Jingwei Too                                                %
-%                                                                         %
-%  E-Mail: jamesjames868@gmail.com                                        %
-%-------------------------------------------------------------------------%  
-
-function fitness=jFitnessFunction(feat,label,X)
-fitness=jwrapperKNN(feat(:,X),label);
+function cost = jFitnessFunction(feat,label,X,HO)
+cost = jwrapperKNN(feat(:,X),label,HO);
 end
 
 
-function ER=jwrapperKNN(feat,label)
-%---// Parameter setting for k-value of KNN //
-k=5; 
-%---// Parameter setting for hold-out (20% for testing set) //
-ho=0.2;
-Model=fitcknn(feat,label,'NumNeighbors',k,'Distance','euclidean'); 
-C=crossval(Model,'holdout',ho);
-ER=kfoldLoss(C);
+function error = jwrapperKNN(sFeat,label,HO)
+%---// Parameter setting //
+k = 5; 
+
+trainIdx = HO.training;        testIdx  = HO.test;
+xtrain   = sFeat(trainIdx,:);  ytrain   = label(trainIdx);
+xvalid   = sFeat(testIdx,:);   yvalid   = label(testIdx);
+
+My_Model = fitcknn(xtrain,ytrain,'NumNeighbors',k);
+pred     = predict(My_Model,xvalid); 
+Acc      = sum(pred == yvalid) / length(yvalid);
+error    = 1 - Acc; 
 end
 
 
