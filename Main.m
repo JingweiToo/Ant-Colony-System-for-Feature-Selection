@@ -10,7 +10,7 @@
 % alpha    : Coefficient control tau
 % beta     : Coefficient control eta
 % tau      : Initial tau
-% eta      : Initial beta
+% eta      : Initial eta
 % rho      : Pheromone
 % phi      : Coefficient 
 % Nf       : Set number of selected features
