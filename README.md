@@ -3,7 +3,7 @@
 ![Wheel](https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/ee0b62f0-75c7-41fd-b5b5-0ed190a65eaf/3a3c48b1-760c-425a-a130-902ada3669f6/images/screenshot.PNG)
 
 ## Introduction
-* This toolbox offers ant colony optimization method ( ACS )  
+* This toolbox offers ant colony system ( ACS )  
 * The < Main.m file > illustrates the example of how ACS can solve the feature selection problem using benchmark data-set
 
 
