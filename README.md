@@ -1,31 +1,35 @@
 # Ant Colony System for Feature Selection
 
+[![View Ant Colony System for Feature Selection on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/71989-ant-colony-system-for-feature-selection)
+[![License](https://img.shields.io/badge/license-BSD_3-yellow.svg)](https://github.com/JingweiToo/Ant-Colony-System-for-Feature-Selection/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/badge/release-1.1-green.svg)](https://github.com/JingweiToo/Ant-Colony-System-for-Feature-Selection)
+
 ![Wheel](https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/ee0b62f0-75c7-41fd-b5b5-0ed190a65eaf/3a3c48b1-760c-425a-a130-902ada3669f6/images/screenshot.PNG)
 
 ## Introduction
 * This toolbox offers ant colony system ( ACS )  
-* The < Main.m file > illustrates the example of how ACS can solve the feature selection problem using benchmark data-set
+* The `Main` file illustrates the example of how ACS can solve the feature selection problem using benchmark data-set
 
 
 ## Input
-* *feat*     : feature vector ( Instances *x* Features )
-* *label*    : label vector ( Instances *x* 1 )
-* *N*        : number of ants
-* *max_Iter* : maximum number of iterations
-* *alpha*    : coefficient control tau
-* *beta*     : coefficient control eta
-* *tau*      : initial tau
-* *eta*      : initial eta
-* *rho*      : pheromone
-* *phi*      : coefficient 
-* *Nf*       : set number of selected features
+* *`feat`*     : feature vector ( Instances *x* Features )
+* *`label`*    : label vector ( Instances *x* 1 )
+* *`N`*        : number of ants
+* *`max_Iter`* : maximum number of iterations
+* *`alpha`*    : coefficient control tau
+* *`beta`*     : coefficient control eta
+* *`tau`*      : initial tau
+* *`eta`*      : initial eta
+* *`rho`*      : pheromone
+* *`phi`*      : coefficient 
+* *`Nf`*       : set number of selected features
 
 
 ## Output
-* *sFeat*    : selected features
-* *Sf*       : selected feature index
-* *Nf*       : number of selected features
-* *curve*    : convergence curve
+* *`sFeat`*    : selected features
+* *`Sf`*       : selected feature index
+* *`Nf`*       : number of selected features
+* *`curve`*    : convergence curve
 
 
 ### Example
